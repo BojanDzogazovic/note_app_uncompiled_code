@@ -1,0 +1,108 @@
+body{
+    background: rgb(0,17,123);
+    background: linear-gradient(35deg, rgba(0,17,123,1) 19%, rgba(119,157,232,1) 96%);
+    height:100%;
+    background-repeat: no-repeat;
+}
+
+#textarea{
+    border-bottom:0.2px solid #fff;
+}
+
+.input-field label {
+    color: #fff;
+}
+
+.input-field #textarea:focus + label {
+color: #fff;
+}
+
+.input-field #textarea:focus {
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+#addbtn{
+    margin-top:15px;
+}
+
+#editbtn{
+    margin-top:15px;
+    display:none;
+}
+
+.box{
+    display: inline-block;
+    margin-left: 25px;
+}
+
+#boxtitle{
+    display:none;
+}
+
+#boxcontent{
+    display:none;
+}
+
+#boxcontent p{
+    display: inline-block;
+}
+
+[type="radio"].with-gap + span:not(.lever):before, [type="radio"].with-gap:checked + span:not(.lever):before{
+    border: 2px solid #fff;
+    z-index: 0;
+}
+
+[type="radio"].with-gap:checked + span:not(.lever):after{
+    border: 2px solid #fff;
+    background-color: #fff;
+    z-index: 0;
+}
+
+.work-header{
+    background: rgb(0,123,107);
+    background: linear-gradient(35deg, rgba(0,123,107,1) 19%, rgba(3,112,113,1) 53%, rgba(16,58,142,1) 96%);
+}
+
+.finances-header{
+    background: rgb(92,0,123);
+    background: linear-gradient(35deg, rgba(92,0,123,1) 19%, rgba(113,3,9,1) 74%);
+}
+
+.personal-header{
+    background: rgb(255,137,3);
+    background: linear-gradient(35deg, rgba(255,137,3,1) 23%, rgba(188,0,0,1) 64%);
+}
+
+.other-header{
+    background: rgb(232,241,0);
+    background: linear-gradient(35deg, rgba(232,241,0,1) 19%, rgba(180,92,3,1) 74%);
+}
+
+label span{
+    margin-right: 30px;
+}
+
+.collection ul{
+    border:none;
+}
+
+#closeediting{
+    position: fixed;
+    top: 50px;
+    right:50px;
+    z-index: 10;
+}
+
+.noteValue{
+    display: inline-block;
+}
+
+.noteButtons{
+    display: inline-block;
+    float: right;
+}
+
+.panel{
+    padding-bottom: 25vh;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">            
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container white-text center-align">
+        <h2>MyNotes App</h2><i class="medium material-icons">event_note</i>
+        <form class="row">
+            <div class="input-field col l8 m12 s12">
+                <textarea id="textarea" class="materialize-textarea white-text" data-length="120"></textarea>
+                <label for="textarea">New note:</label>
+                <div class="left-align">
+                    <div id="message" class="center-align"></div>
+                    <p id="boxtitle" class="box">Note about: </p>
+                    <div id="boxcontent" class="box">
+                        <p>
+                            <label for="work">
+                                <input type="radio" name="group1" class="with-gap typeselector" id="work"/>
+                                <span><i class="tiny material-icons">business_center</i> Work</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="finances">
+                                <input type="radio" name="group1" class="with-gap typeselector" id="finances"/>
+                                <span><i class="tiny material-icons">account_balance_wallet</i> Finances</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="personal">
+                                <input type="radio" name="group1" class="with-gap typeselector" id="personal"/>
+                                <span><i class="tiny material-icons">group</i> Personal life</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="other">
+                                <input type="radio" name="group1" class="with-gap typeselector" id="other"/>
+                                <span><i class="tiny material-icons">create</i> Other</span>
+                            </label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 m12 s12">
+                <button type="submit" id="addbtn" class="waves-effect waves-light btn blue darken-4"><i class="material-icons left">add</i>Add note</button>
+                <button id="editbtn" class="waves-effect waves-light btn orange"><i class="material-icons left">save</i>Save changes</button>
+            </div>
+        </form>
+        <h3>Notes:</h3>
+    </div>
+    <div class="panel">
+        <div class="row">
+            <div class="col l6 m12 s12">
+                <ul id="workpanel" class="collection with-header">
+                    <li class="collection-header work-header white-text"><h4><i class="small material-icons">business_center</i> Work notes:</h4></li>
+                </ul>
+            </div>
+            <div class="col l6 m12 s12">
+                <ul id="financepanel" class="collection with-header">
+                    <li class="collection-header finances-header white-text"><h4><i class="small material-icons">account_balance_wallet</i> Finances notes:</h4></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l6 m12 s12">
+                <ul id="personalpanel" class="collection with-header">
+                    <li class="collection-header personal-header white-text"><h4><i class="small material-icons">group</i> Personal life notes:</h4></li>
+                </ul>
+            </div>
+            <div class="col l6 m12 s12">
+                <ul id="otherpanel" class="collection with-header">
+                    <li class="collection-header other-header white-text"><h4><i class="small material-icons">create</i> Other notes:</h4></li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <!--Float-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red tooltipped" data-position="top" data-tooltip="Edit">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating teal"><i id="editWork" class="material-icons">business_center</i></a></li>
+            <li><a class="btn-floating purple darken-1"><i id="editFinance" class="material-icons">account_balance_wallet</i></a></li>
+            <li><a class="btn-floating red"><i id="editPersonal" class="material-icons">group</i></a></li>
+            <li><a class="btn-floating yellow"><i id="editOther" class="material-icons">create</i></a></li>
+        </ul>
+    </div>
+    <!--editbutton-->
+    <div id="closeediting"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
